@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>Perl modules to find the MIME type of a file</title>
+<link rel="stylesheet" type="text/css" href="/css/lemoda.css"><script>
+var created = new Date ("2017/03/07");
+</script><script src='../../js/lemoda-page.js' type='text/javascript'></script>
+</head>
+<body><nav>
+<div class="navigation-box">
+<ul class="navigation-list">
+<li class="category-link">
+<a href="/index.html">LeMoDa top page</a>
+</li>
+
+<li class="category-link">
+<a href="../../perl/index.html">Perl</a>
+</li>
+
+<li class="category-link">
+<a href="../../perl-modules/index.html">Perl modules</a>
+</li>
+
+<li class="category-link">
+<a href="../../cpan/index.html">CPAN</a>
+</li>
+
+<li class="category-link">
+<a href="../../files/index.html">Files</a>
+</li>
+
+
+</ul>
+</div>
+</nav>
+<div style="clear:left;"></div>
+<h1>Perl modules to find the MIME type of a file</h1>
+<div class="google-ad-horizontal">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- LeMoDa bar, 728x90, created 22/09/09 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6052617510425031"
+     data-ad-slot="6800468934"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><script>
+try { write_last_mod (); } catch(err) { }
+</script>
+<p>
+This page compares CPAN Perl modules which can be used to detect the
+mime type of a file. (The mime type is a short string like "image/png",
+or "text/html", which is used when sending files over the internet so
+that the receiver can work out what kind of file was sent.)
+</p>
+<h2> Contents</h2>
+<ul>
+<li><a href='#list'>List of modules</a></li>
+<li><a href='#outputs'>Outputs</a></li>
+<li><a href='#scores'>Scores</a></li>
+<li><a href='#code'>Test program</a></li>
+</ul>
+
+<h2 id='list'>List of modules</h2>
+
+<div>
+<h3>
+File::LibMagic</h3>
+<p>
+<a href='https://metacpan.org/pod/File::LibMagic'>File::LibMagic</a></p>
+<p>
+<a href="http://cpanratings.perl.org/dist/File-LibMagic#13030">
+My review of version 1.15 on CPAN Ratings</a>
+</p>
+<h3>
+File::LibMagic::FFI</h3>
+<p>
+<a href='https://metacpan.org/pod/File::LibMagic::FFI'>File::LibMagic::FFI</a></p>
+<h3>
+File::MMagic</h3>
+<p>
+<a href='https://metacpan.org/pod/File::MMagic'>File::MMagic</a></p>
+<p>
+<a href="http://cpanratings.perl.org/dist/File-MMagic#13028">
+My review of version 1.30 on CPAN Ratings</a>
+</p>
+<h3>
+File::MMagic::XS</h3>
+<p>
+<a href='https://metacpan.org/pod/File::MMagic::XS'>File::MMagic::XS</a></p>
+<p>
+<a href="http://cpanratings.perl.org/dist/File-MMagic-XS#13018">
+My review of version 0.09008 on CPAN Ratings</a>
+</p>
+<h3>
+File::MimeInfo</h3>
+<p>
+<a href='https://metacpan.org/pod/File::MimeInfo'>File::MimeInfo</a></p>
+<p>
+<a href="http://cpanratings.perl.org/dist/File-MimeInfo#13026">
+My review of version 0.28 on CPAN Ratings</a>
+</p>
+<h3>
+File::Type</h3>
+<p>
+<a href='https://metacpan.org/pod/File::Type'>File::Type</a></p>
+<p>
+<a href="http://cpanratings.perl.org/dist/File-Type#13022">
+My review of version 0.22 on CPAN Ratings</a>
+</p>
+<h3>
+File::Type::WebImages</h3>
+<p>
+<a href='https://metacpan.org/pod/File::Type::WebImages'>File::Type::WebImages</a></p>
+<p>
+<a href="http://cpanratings.perl.org/dist/File-Type-WebImages#13020">
+My review of version 1.01 on CPAN Ratings</a>
+</p>
+<h3>
+MIME::Detect</h3>
+<p>
+<a href='https://metacpan.org/pod/MIME::Detect'>MIME::Detect</a></p>
+<p>
+<a href="http://cpanratings.perl.org/dist/MIME-Detect#13032">
+My review of version 0.08 on CPAN Ratings</a>
+</p>
+<h3>
+MIME::Type::FileName</h3>
+<p>
+<a href='https://metacpan.org/pod/MIME::Type::FileName'>MIME::Type::FileName</a></p>
+<p>
+<a href="http://cpanratings.perl.org/dist/MIME-Type-FileName#13034">
+My review of version 1.0 on CPAN Ratings</a>
+</p>
+<h3>
+MIME::Types</h3>
+<p>
+<a href='https://metacpan.org/pod/MIME::Types'>MIME::Types</a></p>
+<p>
+<a href="http://cpanratings.perl.org/dist/MIME-Types#13030">
+My review of version 2.13 on CPAN Ratings</a>
+</p>
+<h3>
+Media::Type::Simple</h3>
+<p>
+<a href='https://metacpan.org/pod/Media::Type::Simple'>Media::Type::Simple</a></p>
+<p>
+<a href="http://cpanratings.perl.org/dist/Media-Type-Simple#13024">
+My review of version v0.31.0 on CPAN Ratings</a>
+</p>
+<h3>
+Padre::MIME</h3>
+<p>
+<a href='https://metacpan.org/pod/Padre::MIME'>Padre::MIME</a></p>
+</div>
+
+
+<h2 id='outputs'>Outputs</h2>
+<p>
+In this section, I show the outputs of the modules on various types of
+files. The source code which produces these results is shown
+at <a href='#code'>Test program</a>. The accuracy scores of the
+modules are shown at <a href='#scores'>Scores</a>.
+</p>
+<p>
+If there is an official MIME type for the file type, the results of
+the modules which get the MIME type correct are highlighted in
+blue. Some of these file types do not have recognised MIME types and
+are not highlighted.
+</p>
+
+<div>
+<h3>
+Very long C file in UTF-8</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>binary</td>
+</tr>
+<tr>
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::MMagic</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MimeInfo</td><td>&nbsp;</td><td>text/x-csrc</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr>
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>text/plain; text/x-csrc</td>
+</tr>
+<tr>
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>text/x-csrc</td>
+</tr>
+<tr>
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>text/x-c</td>
+</tr>
+<tr>
+<td>MIME::Types</td><td>&nbsp;</td><td>text/x-csrc</td>
+</tr>
+<tr>
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>text/x-csrc</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>Yes</td>
+</tr>
+</table>
+<h3>
+Short SVG image file in UTF-8 ("image/svg+xml")</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>us-ascii</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>image/svg+xml</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>image/svg+xml</td>
+</tr>
+<tr>
+<td>File::MMagic</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>text/xml</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MimeInfo</td><td>&nbsp;</td><td>image/svg+xml</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr>
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>text/plain; application/xml</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>image/svg+xml</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>image/svg+xml</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Types</td><td>&nbsp;</td><td>image/svg+xml</td>
+</tr>
+<tr style="background:skyblue;">
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>image/svg+xml</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>Yes</td>
+</tr>
+</table>
+<h3>
+GIF image ("image/gif")</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>binary</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>image/gif</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>image/gif</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MMagic</td><td>&nbsp;</td><td>image/gif</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>image/gif</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MimeInfo</td><td>&nbsp;</td><td>image/gif</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::Type</td><td>&nbsp;</td><td>image/gif</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>image/gif</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>image/gif</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>image/gif</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>image/gif</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Types</td><td>&nbsp;</td><td>image/gif</td>
+</tr>
+<tr style="background:skyblue;">
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>image/gif</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>No</td>
+</tr>
+</table>
+<h3>
+Binary executable</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>binary</td>
+</tr>
+<tr>
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>application/x-executable</td>
+</tr>
+<tr>
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>application/x-executable</td>
+</tr>
+<tr>
+<td>File::MMagic</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>application/x-executable</td>
+</tr>
+<tr>
+<td>File::MimeInfo</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/x-executable-file</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr>
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td></td>
+</tr>
+<tr>
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td></td>
+</tr>
+<tr>
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>MIME::Types</td><td>&nbsp;</td><td>unknown</td>
+</tr>
+<tr>
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>no extension</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>No</td>
+</tr>
+</table>
+<h3>
+PNG image ("image/png")</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>binary</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>image/png</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>image/png</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MMagic</td><td>&nbsp;</td><td>image/png</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>image/png</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MimeInfo</td><td>&nbsp;</td><td>image/png</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>image/x-png</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>image/png</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>image/png</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>image/png</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>image/png</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Types</td><td>&nbsp;</td><td>image/png</td>
+</tr>
+<tr style="background:skyblue;">
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>image/png</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>No</td>
+</tr>
+</table>
+<h3>
+EUC-JP text data</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>iso-8859-1</td>
+</tr>
+<tr>
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MMagic</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MimeInfo</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr>
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td></td>
+</tr>
+<tr>
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>MIME::Types</td><td>&nbsp;</td><td>unknown</td>
+</tr>
+<tr>
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>no extension</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>No</td>
+</tr>
+</table>
+<h3>
+JPEG image data ("image/jpeg")</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>binary</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>image/jpeg</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>image/jpeg</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MMagic</td><td>&nbsp;</td><td>image/jpeg</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>image/jpeg</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MimeInfo</td><td>&nbsp;</td><td>image/jpeg</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::Type</td><td>&nbsp;</td><td>image/jpeg</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>image/jpeg</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>image/jpeg</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>image/jpeg</td>
+</tr>
+<tr>
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>image/pjpeg</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Types</td><td>&nbsp;</td><td>image/jpeg</td>
+</tr>
+<tr style="background:skyblue;">
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>image/jpeg</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>No</td>
+</tr>
+</table>
+<h3>
+BMP image file ("image/bmp")</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>binary</td>
+</tr>
+<tr>
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>image/x-ms-bmp</td>
+</tr>
+<tr>
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>image/x-ms-bmp</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MMagic</td><td>&nbsp;</td><td>image/bmp</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>image/x-ms-bmp</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MimeInfo</td><td>&nbsp;</td><td>image/bmp</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>image/x-bmp</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>image/bmp</td>
+</tr>
+<tr>
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td></td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>image/bmp</td>
+</tr>
+<tr>
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>image/x-windows-bmp</td>
+</tr>
+<tr>
+<td>MIME::Types</td><td>&nbsp;</td><td>image/x-bmp</td>
+</tr>
+<tr>
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>image/x-ms-bmp</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>No</td>
+</tr>
+</table>
+<h3>
+X bitmap (xbm) file</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>us-ascii</td>
+</tr>
+<tr>
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MMagic</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MimeInfo</td><td>&nbsp;</td><td>image/x-xbitmap</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr>
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>image/x-xbitmap</td>
+</tr>
+<tr>
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>image/xbm</td>
+</tr>
+<tr>
+<td>MIME::Types</td><td>&nbsp;</td><td>image/x-xbitmap</td>
+</tr>
+<tr>
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>image/x-xbitmap</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>Yes</td>
+</tr>
+</table>
+<h3>
+MNG video data</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>binary</td>
+</tr>
+<tr>
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>video/x-mng</td>
+</tr>
+<tr>
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>video/x-mng</td>
+</tr>
+<tr>
+<td>File::MMagic</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>video/x-mng</td>
+</tr>
+<tr>
+<td>File::MimeInfo</td><td>&nbsp;</td><td>video/x-mng</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr>
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>video/x-mng</td>
+</tr>
+<tr>
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>video/x-mng</td>
+</tr>
+<tr>
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>MIME::Types</td><td>&nbsp;</td><td>video/x-mng</td>
+</tr>
+<tr>
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>video/x-mng</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>No</td>
+</tr>
+</table>
+<h3>
+Microsoft Office Excel file (old format) ("application/vnd.ms-excel")</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>application/vnd.ms-excelbinary</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>application/vnd.ms-excel</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>application/vnd.ms-excel</td>
+</tr>
+<tr>
+<td>File::MMagic</td><td>&nbsp;</td><td>application/msword</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>application/msword</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MimeInfo</td><td>&nbsp;</td><td>application/vnd.ms-excel</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr>
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>application/x-ole-storage</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>application/vnd.ms-excel</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>application/vnd.ms-excel</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Types</td><td>&nbsp;</td><td>application/vnd.ms-excel</td>
+</tr>
+<tr style="background:skyblue;">
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>application/vnd.ms-excel</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>No</td>
+</tr>
+</table>
+<h3>
+Microsoft Office Word file (old format) ("application/msword")</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>application/mswordbinary</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>application/msword</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>application/msword</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MMagic</td><td>&nbsp;</td><td>application/msword</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>application/msword</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MimeInfo</td><td>&nbsp;</td><td>application/msword</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>application/msword; application/x-ole-storage</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>application/msword</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>application/msword</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Types</td><td>&nbsp;</td><td>application/msword</td>
+</tr>
+<tr style="background:skyblue;">
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>application/msword</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>No</td>
+</tr>
+</table>
+<h3>
+Gzip file ("application/gzip")</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>binary</td>
+</tr>
+<tr>
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>application/x-gzip</td>
+</tr>
+<tr>
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>application/x-gzip</td>
+</tr>
+<tr>
+<td>File::MMagic</td><td>&nbsp;</td><td>application/x-gzip</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MimeInfo</td><td>&nbsp;</td><td>application/gzip</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/x-gzip</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>application/gzip</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>application/gzip</td>
+</tr>
+<tr>
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>application/x-gzip</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Types</td><td>&nbsp;</td><td>application/gzip</td>
+</tr>
+<tr>
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>application/x-gzip</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>No</td>
+</tr>
+</table>
+<h3>
+XHTML file</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>utf-8</td>
+</tr>
+<tr>
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>application/xml</td>
+</tr>
+<tr>
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>application/xml</td>
+</tr>
+<tr>
+<td>File::MMagic</td><td>&nbsp;</td><td>text/html</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>text/xml</td>
+</tr>
+<tr>
+<td>File::MimeInfo</td><td>&nbsp;</td><td>text/html</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr>
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>application/xhtml+xml; text/plain; text/html; application/xml</td>
+</tr>
+<tr>
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>text/html</td>
+</tr>
+<tr>
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>text/html</td>
+</tr>
+<tr>
+<td>MIME::Types</td><td>&nbsp;</td><td>text/html</td>
+</tr>
+<tr>
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>text/html</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>Yes</td>
+</tr>
+</table>
+<h3>
+HTML5 file ("text/html")</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>utf-8</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>text/html</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>text/html</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MMagic</td><td>&nbsp;</td><td>text/html</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>text/html</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MimeInfo</td><td>&nbsp;</td><td>text/html</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>text/plain; text/html</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>text/html</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>text/html</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Types</td><td>&nbsp;</td><td>text/html</td>
+</tr>
+<tr style="background:skyblue;">
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>text/html</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>Yes</td>
+</tr>
+</table>
+<h3>
+Empty file</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>binary</td>
+</tr>
+<tr>
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>inode/x-empty</td>
+</tr>
+<tr>
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>inode/x-empty</td>
+</tr>
+<tr>
+<td>File::MMagic</td><td>&nbsp;</td><td>x-system/x-unix;  empty</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>x-system/x-unix;  empty</td>
+</tr>
+<tr>
+<td>File::MimeInfo</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr>
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td></td>
+</tr>
+<tr>
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>MIME::Types</td><td>&nbsp;</td><td>unknown</td>
+</tr>
+<tr>
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>no extension</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>Yes</td>
+</tr>
+</table>
+<h3>
+JSON file ("application/json")</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>utf-8</td>
+</tr>
+<tr>
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MMagic</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MimeInfo</td><td>&nbsp;</td><td>application/json</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr>
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>application/json</td>
+</tr>
+<tr>
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Types</td><td>&nbsp;</td><td>application/json</td>
+</tr>
+<tr>
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>Unknown extension</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>Yes</td>
+</tr>
+</table>
+<h3>
+Manual page in troff format ("text/troff")</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>iso-8859-1</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>text/troff</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>text/troff</td>
+</tr>
+<tr>
+<td>File::MMagic</td><td>&nbsp;</td><td>text/x-roff</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MimeInfo</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr>
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td></td>
+</tr>
+<tr>
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>MIME::Types</td><td>&nbsp;</td><td>unknown</td>
+</tr>
+<tr>
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>Unknown extension</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>No</td>
+</tr>
+</table>
+<h3>
+TrueType font ("font/ttf")</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>binary</td>
+</tr>
+<tr>
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>application/x-font-ttf</td>
+</tr>
+<tr>
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>application/x-font-ttf</td>
+</tr>
+<tr>
+<td>File::MMagic</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MimeInfo</td><td>&nbsp;</td><td>application/x-font-ttf</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::Type</td><td>&nbsp;</td><td>font/ttf</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr>
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>application/x-font-ttf</td>
+</tr>
+<tr>
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>application/x-font-ttf</td>
+</tr>
+<tr>
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>MIME::Types</td><td>&nbsp;</td><td>application/x-font-ttf</td>
+</tr>
+<tr>
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>Unknown extension</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>No</td>
+</tr>
+</table>
+<h3>
+CSV file in Shift-JIS encoding ("text/csv")</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>unknown-8bit</td>
+</tr>
+<tr>
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MMagic</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MimeInfo</td><td>&nbsp;</td><td>text/csv</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr>
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>text/csv</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>text/csv</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Types</td><td>&nbsp;</td><td>text/csv</td>
+</tr>
+<tr style="background:skyblue;">
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>text/csv</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>No</td>
+</tr>
+</table>
+<h3>
+JavaScript program ("application/javascript")</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>us-ascii</td>
+</tr>
+<tr>
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MMagic</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MimeInfo</td><td>&nbsp;</td><td>application/javascript</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr>
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>text/plain</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>application/javascript</td>
+</tr>
+<tr>
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>application/x-javascript</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Types</td><td>&nbsp;</td><td>application/javascript</td>
+</tr>
+<tr style="background:skyblue;">
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>application/javascript</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>Yes</td>
+</tr>
+</table>
+<h3>
+Ogg audio ("audio/ogg")</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>binary</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>audio/ogg</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>audio/ogg</td>
+</tr>
+<tr>
+<td>File::MMagic</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>application/ogg</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MimeInfo</td><td>&nbsp;</td><td>audio/ogg</td>
+</tr>
+<tr>
+<td>File::Type</td><td>&nbsp;</td><td>application/octet-stream</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>application/ogg; audio/ogg; video/ogg</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>audio/x-vorbis+ogg; audio/x-flac+ogg; audio/x-speex+ogg; video/x-theora+ogg; audio/ogg; video/ogg</td>
+</tr>
+<tr>
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>application/ogg</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Types</td><td>&nbsp;</td><td>audio/ogg</td>
+</tr>
+<tr>
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>application/ogg</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>No</td>
+</tr>
+</table>
+<h3>
+PDF document ("application/pdf")</h3>
+<table>
+<tr>
+<td>File::LibMagic encoding</td><td>&nbsp;</td><td>binary</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic mime type</td><td>&nbsp;</td><td>application/pdf</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::LibMagic::FFI</td><td>&nbsp;</td><td>application/pdf</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MMagic</td><td>&nbsp;</td><td>application/pdf</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MMagic::XS</td><td>&nbsp;</td><td>application/pdf</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::MimeInfo</td><td>&nbsp;</td><td>application/pdf</td>
+</tr>
+<tr style="background:skyblue;">
+<td>File::Type</td><td>&nbsp;</td><td>application/pdf</td>
+</tr>
+<tr>
+<td>File::Type::WebImages</td><td>&nbsp;</td><td>undefined</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from file</td><td>&nbsp;</td><td>application/pdf; text/plain; text/x-matlab; text/x-tex</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Detect: from name</td><td>&nbsp;</td><td>application/pdf</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Type::FileName</td><td>&nbsp;</td><td>application/pdf</td>
+</tr>
+<tr style="background:skyblue;">
+<td>MIME::Types</td><td>&nbsp;</td><td>application/pdf</td>
+</tr>
+<tr style="background:skyblue;">
+<td>Media::Type::Simple</td><td>&nbsp;</td><td>application/pdf</td>
+</tr>
+<tr>
+<td>Valid-UTF-8</td><td>&nbsp;</td><td>No</td>
+</tr>
+</table>
+<h2 id="scores">
+Scores</h2>
+<table>
+<tr><td>File::MimeInfo<td>14/16
+<tr><td>MIME::Detect: from name<td>14/16
+<tr><td>MIME::Types<td>13/16
+<tr><td>File::LibMagic mime type<td>10/16
+<tr><td>File::LibMagic::FFI<td>10/16
+<tr><td>Media::Type::Simple<td>10/16
+<tr><td>MIME::Type::FileName<td>8/16
+<tr><td>MIME::Detect: from file<td>8/16
+<tr><td>File::MMagic<td>7/16
+<tr><td>File::MMagic::XS<td>6/16
+<tr><td>File::Type<td>4/16
+<tr><td>File::Type::WebImages<td>4/16
+</table>
+</div>
+
+<p>
+These scores give the number of times the module got the correct mime
+type for the particular file, if there was an authoritative mime type
+assigned for that file type. The "hits" are shown with a blue
+background above.
+</p>
+<h2 id='code'>Test program</h2>
+<p>
+The program I used to compare the modules is this:
+</p>
+    <pre class="perl-code">
+<span class="comment-delimiter">#</span><span class="comment">!/home/ben/software/install/bin/perl
+</span>
+<span class="comment-delimiter"># </span><span class="comment">Test various file-to-mime programs on CPAN.
+</span>
+<span class="keyword">use</span> <span class="function-name">warnings</span>;
+<span class="keyword">use</span> <span class="function-name">strict</span>;
+<span class="keyword">use</span> <span class="function-name">utf8</span>;
+<span class="keyword">use</span> <span class="function-name">FindBin</span> <span class="string">'$Bin'</span>;
+<span class="keyword">use</span> <span class="function-name">Unicode::UTF8</span> <span class="string">'valid_utf8'</span>;
+<span class="keyword">use</span> <span class="function-name">File::Slurper</span> <span class="string">'read_binary'</span>;
+<span class="keyword">use</span> <span class="function-name">Table::Readable</span> <span class="string">'read_table'</span>;
+<span class="keyword">use</span> <span class="function-name">HTML::Make</span>;
+<span class="keyword">use</span> <span class="function-name">Getopt::Long</span>;
+<span class="keyword">use</span> <span class="function-name">List::UtilsBy</span> <span class="string">'nsort_by'</span>;
+
+<span class="comment-delimiter"># </span><span class="comment">Candidate modules
+</span>
+<span class="keyword">use</span> <span class="function-name">File::LibMagic</span>;
+<span class="keyword">use</span> <span class="function-name">File::MMagic</span>;
+<span class="keyword">use</span> <span class="function-name">File::MMagic::XS</span> <span class="string">':compat'</span>;
+<span class="keyword">use</span> <span class="function-name">File::MimeInfo</span>;
+<span class="keyword">use</span> <span class="function-name">File::Type</span>;
+<span class="keyword">use</span> <span class="function-name">File::Type::WebImages</span> ();
+<span class="keyword">use</span> <span class="function-name">File::LibMagic::FFI</span>;
+<span class="keyword">use</span> <span class="function-name">Media::Type::Simple</span>;
+<span class="keyword">use</span> <span class="function-name">MIME::Types</span>;
+<span class="keyword">use</span> <span class="function-name">MIME::Type::FileName</span>;
+
+GetOptions (
+    <span class="string">html</span> =&gt; \my <span class="variable-name">$html</span>,
+    <span class="string">mimedetect</span> =&gt; \my <span class="variable-name">$mimedetect</span>,
+);
+
+<span class="keyword">if</span> ($mimedetect) {
+    <span class="keyword">eval</span> <span class="string">"use MIME::Detect;"</span>;
+}
+
+
+<span class="keyword">my</span> <span class="variable-name">$flm</span> = File::LibMagic-&gt;new ();
+<span class="keyword">my</span> <span class="variable-name">$mm</span> = new File::MMagic;
+<span class="keyword">my</span> <span class="variable-name">$mmx</span> = File::MMagic::XS-&gt;new ();
+<span class="keyword">my</span> <span class="variable-name">$ft</span> = File::Type-&gt;new();
+<span class="keyword">my</span> <span class="variable-name">$mt</span>    = MIME::Types-&gt;new();
+<span class="keyword">my</span> <span class="variable-name">$mime</span>;
+<span class="keyword">if</span> ($mimedetect) {
+    $mime = MIME::Detect-&gt;new();
+}
+<span class="keyword">my</span> <span class="variable-name">$magic</span> = File::LibMagic::FFI-&gt;new ();
+
+<span class="keyword">my</span> <span class="cperl-array">@files</span> = read_table (<span class="string">"$Bin/good-bad.txt"</span>);
+
+<span class="keyword">my</span> <span class="cperl-array">@fresults</span>;
+
+<span class="comment-delimiter"># </span><span class="comment">Number of the mime types for each module/method which are correct.
+</span>
+<span class="keyword">my</span> <span class="cperl-hash">%score</span>;
+
+<span class="comment-delimiter"># </span><span class="comment">Total of known mime types
+</span>
+<span class="keyword">my</span> <span class="variable-name">$total</span>;
+
+<span class="keyword">for</span> <span class="keyword">my</span> <span class="variable-name">$entry</span> (<span class="cperl-array">@files</span>) {
+    <span class="keyword">my</span> <span class="cperl-hash">%results</span>;
+    <span class="cperl-hash">$results</span>{<span class="string">desc</span>} = $entry-&gt;{<span class="string">desc</span>};
+    <span class="keyword">my</span> <span class="variable-name">$tfile</span> = $entry-&gt;{<span class="string">file</span>};
+    <span class="keyword">my</span> <span class="variable-name">$i</span> = $flm-&gt;info_from_filename ($tfile);
+    <span class="cperl-hash">$results</span>{<span class="string">'File::LibMagic mime type'</span>} = $i-&gt;{<span class="string">mime_type</span>};
+    <span class="cperl-hash">$results</span>{<span class="string">'File::LibMagic encoding'</span>} = $i-&gt;{<span class="string">encoding</span>};
+    <span class="keyword">my</span> <span class="variable-name">$res</span> = $mm-&gt;checktype_filename ($tfile);
+    <span class="cperl-hash">$results</span>{<span class="string">'File::MMagic'</span>} = $res;
+    <span class="keyword">my</span> <span class="variable-name">$resxs</span> = $mmx-&gt;checktype_filename ($tfile);
+    <span class="cperl-hash">$results</span>{<span class="string">'File::MMagic::XS'</span>} = $resxs;
+    <span class="keyword">my</span> <span class="variable-name">$type_from_data</span> = $ft-&gt;checktype_filename($tfile);
+    <span class="cperl-hash">$results</span>{<span class="string">'File::Type'</span>} = $type_from_data;
+    <span class="keyword">my</span> <span class="variable-name">$mime_type</span> = mimetype($tfile);
+    <span class="cperl-hash">$results</span>{<span class="string">'File::MimeInfo'</span>} = $mime_type;
+    <span class="keyword">my</span> <span class="variable-name">$ffi</span> = $magic-&gt;checktype_filename($tfile);
+    $ffi =~ <span class="cperl-nonoverridable">s</span><span class="constant">/</span><span class="string">;</span><span class="function-name">.</span><span class="builtin">*</span><span class="function-name">$</span><span class="constant">//</span>;
+    <span class="cperl-hash">$results</span>{<span class="string">'File::LibMagic::FFI'</span>} = $ffi;
+
+
+    <span class="keyword">my</span> <span class="variable-name">$ext</span> = $tfile;
+    <span class="keyword">if</span> ($ext =~ <span class="cperl-nonoverridable">s</span><span class="constant">!</span><span class="function-name">^.</span><span class="builtin">*\</span><span class="string">.</span><span class="constant">!!</span>) {
+        <span class="comment-delimiter"># </span><span class="comment">Media::Type::Simple throws an exception when given a header
+</span>        <span class="comment-delimiter"># </span><span class="comment">it doesn't know about.
+</span>        <span class="keyword">my</span> <span class="variable-name">$media_type</span>;
+        <span class="keyword">eval</span> {
+            $media_type = type_from_ext ($ext);
+        };
+        <span class="keyword">if</span> ($@ &amp;&amp; $@ =~ <span class="constant">/</span><span class="string">Unknown extension</span><span class="constant">/</span>) {
+            $media_type = <span class="string">'Unknown extension'</span>;
+        }
+        <span class="cperl-hash">$results</span>{<span class="string">'Media::Type::Simple'</span>} = $media_type;
+    }
+    <span class="keyword">else</span> {
+        <span class="cperl-hash">$results</span>{<span class="string">'Media::Type::Simple'</span>} = <span class="string">"no extension"</span>;
+    }
+    <span class="keyword">my</span> <span class="variable-name">$mt_type</span>  = $mt-&gt;mimeTypeOf($tfile);
+    <span class="keyword">if</span> (<span class="negation-char">!</span> <span class="cperl-nonoverridable">defined</span> $mt_type) {
+        $mt_type = <span class="string">'unknown'</span>;
+    }
+    <span class="cperl-hash">$results</span>{<span class="string">'MIME::Types'</span>} = $mt_type;
+    <span class="keyword">if</span> ($mimedetect) {
+        <span class="keyword">my</span> <span class="cperl-array">@types</span> = $mime-&gt;mime_types($tfile);
+        <span class="cperl-hash">$results</span>{<span class="string">"MIME::Detect: from file"</span>} = <span class="type">join</span> <span class="string">'; '</span>, (<span class="cperl-nonoverridable">map</span> {$_-&gt;mime_type} <span class="cperl-array">@types</span>);
+        <span class="keyword">my</span> <span class="cperl-array">@ntypes</span> = $mime-&gt;mime_types_from_name ($tfile);
+        <span class="cperl-hash">$results</span>{<span class="string">"MIME::Detect: from name"</span>} = <span class="type">join</span> <span class="string">'; '</span>, (<span class="cperl-nonoverridable">map</span> {$_-&gt;mime_type} <span class="cperl-array">@ntypes</span>);
+    }
+    <span class="keyword">my</span> <span class="variable-name">$ftw</span> = File::Type::WebImages::mime_type ($tfile);
+    <span class="keyword">if</span> (<span class="negation-char">!</span> <span class="cperl-nonoverridable">defined</span> ($ftw)) {
+        $ftw = <span class="string">'undefined'</span>;
+    }
+    <span class="cperl-hash">$results</span>{<span class="string">'File::Type::WebImages'</span>} = $ftw;
+    <span class="cperl-hash">$results</span>{<span class="string">'MIME::Type::FileName'</span>} = MIME::Type::FileName::guess ($tfile);
+    <span class="keyword">my</span> <span class="variable-name">$bytes</span> = read_binary ($tfile);
+    <span class="comment-delimiter"># </span><span class="comment">This gives exactly the same results.
+</span>    <span class="comment-delimiter">#</span><span class="comment">my $flmsi = $flm-&gt;info_from_string ($bytes);
+</span>    <span class="comment-delimiter">#    </span><span class="cperl-hash">$results</span><span class="comment">{'File::LibMagic from string'} = $flmsi-&gt;{</span><span class="string">mime_type</span><span class="comment">};
+</span>    <span class="keyword">my</span> <span class="variable-name">$valid_utf8</span> = valid_utf8 ($bytes);
+    <span class="cperl-hash">$results</span>{<span class="string">'Valid-UTF-8'</span>} = $valid_utf8 ? <span class="string">'Yes'</span> : <span class="string">'No'</span>;
+    <span class="keyword">my</span> <span class="variable-name">$ok</span> = $entry-&gt;{<span class="string">ok</span>};
+    <span class="keyword">if</span> ($ok) {
+        <span class="keyword">for</span> <span class="keyword">my</span> <span class="variable-name">$k</span> (<span class="cperl-nonoverridable">keys</span> <span class="cperl-hash">%results</span>) {
+            <span class="keyword">if</span> ($k =~ <span class="constant">/</span><span class="string">encoding</span><span class="constant">/</span>) {
+                <span class="keyword">next</span>;
+            }
+            <span class="keyword">my</span> <span class="variable-name">$v</span> = <span class="cperl-hash">$results</span>{$k};
+            <span class="keyword">if</span> ($v =~ <span class="constant">/</span><span class="builtin">\b\Q</span><span class="variable-name">$ok</span><span class="builtin">\E\b</span><span class="constant">/</span>) {
+                <span class="cperl-hash">$score</span>{$k}++;
+            }
+        }
+        <span class="cperl-hash">$results</span>{<span class="string">ok</span>} = $entry-&gt;{<span class="string">ok</span>};
+        $total++;
+    }
+    <span class="comment-delimiter"># </span><span class="comment">my $file = `file $tfile`;
+</span>    <span class="comment-delimiter"># </span><span class="comment">chomp $file;
+</span>    <span class="comment-delimiter"># </span><span class="comment">print "file: $file\n";
+</span>    <span class="comment-delimiter"># </span><span class="comment">print "\n";
+</span>    <span class="cperl-nonoverridable">push</span> <span class="cperl-array">@fresults</span>, \<span class="cperl-hash">%results</span>;
+}
+<span class="keyword">my</span> <span class="cperl-array">@scorder</span> = <span class="cperl-nonoverridable">keys</span> <span class="cperl-hash">%score</span>;
+<span class="cperl-array">@scorder</span> = <span class="type">reverse</span> (nsort_by {<span class="cperl-hash">$score</span>{$_}} <span class="cperl-array">@scorder</span>);
+<span class="keyword">if</span> ($html) {
+    <span class="comment-delimiter"># </span><span class="comment">HTML output
+</span>    <span class="keyword">my</span> <span class="variable-name">$div</span> = HTML::Make-&gt;new (<span class="string">'div'</span>);
+    <span class="keyword">for</span> <span class="keyword">my</span> <span class="variable-name">$entry</span> (<span class="cperl-array">@fresults</span>) {
+        <span class="keyword">my</span> <span class="variable-name">$desc</span> = <span class="type">ucfirst</span> ($entry-&gt;{<span class="string">desc</span>});
+        <span class="keyword">if</span> ($entry-&gt;{<span class="string">ok</span>}) {
+            $desc .= <span class="string">" (\"$entry-&gt;{ok}\")"</span>;
+        }
+        $div-&gt;<span class="cperl-nonoverridable">push</span> (<span class="string">'h3'</span>, <span class="string">text</span> =&gt; $desc);
+        <span class="keyword">my</span> <span class="variable-name">$table</span> = $div-&gt;<span class="cperl-nonoverridable">push</span> (<span class="string">'table'</span>);
+        <span class="keyword">for</span> <span class="keyword">my</span> <span class="variable-name">$k</span> (<span class="cperl-nonoverridable">sort</span> <span class="cperl-nonoverridable">keys</span> <span class="cperl-hash">%</span><span class="variable-name">$entry</span>) {
+            <span class="keyword">if</span> ($k =~ <span class="constant">/</span><span class="function-name">^</span><span class="keyword">(</span><span class="string">desc</span><span class="keyword">|</span><span class="string">ok</span><span class="keyword">)</span><span class="function-name">$</span><span class="constant">/</span>) {
+                <span class="keyword">next</span>;
+            }
+            <span class="keyword">my</span> <span class="variable-name">$v</span> = $entry-&gt;{$k};
+            <span class="keyword">if</span> (<span class="negation-char">!</span> <span class="cperl-nonoverridable">defined</span> $v) {
+                $v = <span class="string">'undefined'</span>;
+            }
+            <span class="keyword">my</span> <span class="variable-name">$tr</span> = $table-&gt;<span class="cperl-nonoverridable">push</span> (<span class="string">'tr'</span>);
+            <span class="keyword">my</span> <span class="variable-name">$ok</span> = $entry-&gt;{<span class="string">ok</span>};
+            <span class="keyword">if</span> ($ok &amp;&amp; $v =~ <span class="constant">/</span><span class="builtin">\b\Q</span><span class="variable-name">$ok</span><span class="builtin">\E\b</span><span class="constant">/</span>) {
+                $tr-&gt;add_attr (<span class="string">style</span> =&gt; <span class="string">'background:skyblue;'</span>);
+            }
+            $tr-&gt;add_text (<span class="string">"&lt;td&gt;$k&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;$v&lt;/td&gt;\n"</span>);
+        }
+    }
+    $div-&gt;<span class="cperl-nonoverridable">push</span> (<span class="string">'h2'</span>, <span class="string">text</span> =&gt; <span class="string">'Scores'</span>, <span class="string">attr</span> =&gt; {<span class="string">id</span> =&gt; <span class="string">'scores'</span>});
+    <span class="keyword">my</span> <span class="variable-name">$table</span> = $div-&gt;<span class="cperl-nonoverridable">push</span> (<span class="string">'table'</span>);
+    <span class="keyword">for</span> <span class="keyword">my</span> <span class="variable-name">$k</span> (<span class="cperl-array">@scorder</span>) {
+        $table-&gt;add_text (<span class="string">"&lt;tr&gt;&lt;td&gt;$k&lt;td&gt;</span><span class="cperl-hash">$score</span><span class="string">{$k}/$total\n"</span>);
+    }
+    <span class="cperl-nonoverridable">print</span> $div-&gt;text ();
+}
+<span class="keyword">else</span> {
+    <span class="comment-delimiter"># </span><span class="comment">Text output
+</span>    <span class="keyword">for</span> <span class="keyword">my</span> <span class="variable-name">$entry</span> (<span class="cperl-array">@fresults</span>) {
+        <span class="cperl-nonoverridable">print</span> <span class="string">"File type: $entry-&gt;{desc}"</span>;
+        <span class="keyword">if</span> ($entry-&gt;{<span class="string">ok</span>}) {
+            <span class="cperl-nonoverridable">print</span> <span class="string">" (expect mime type \"$entry-&gt;{ok}\")"</span>;
+        }
+        <span class="cperl-nonoverridable">print</span> <span class="string">"\n\n"</span>;
+        <span class="keyword">for</span> <span class="keyword">my</span> <span class="variable-name">$k</span> (<span class="cperl-nonoverridable">sort</span> <span class="cperl-nonoverridable">keys</span> <span class="cperl-hash">%</span><span class="variable-name">$entry</span>) {
+            <span class="cperl-nonoverridable">print</span> <span class="string">"$k: $entry-&gt;{$k}\n"</span> <span class="keyword">unless</span> $k =~ <span class="constant">/</span><span class="function-name">^</span><span class="keyword">(</span><span class="string">desc</span><span class="keyword">|</span><span class="string">ok</span><span class="keyword">)</span><span class="function-name">$</span><span class="constant">/</span>;
+        }
+        <span class="cperl-nonoverridable">print</span> <span class="string">"\n"</span>;
+    }
+    <span class="cperl-nonoverridable">print</span> <span class="string">"\nScores:\n\n"</span>;
+    <span class="keyword">for</span> <span class="keyword">my</span> <span class="variable-name">$k</span> (<span class="cperl-array">@scorder</span>) {
+        <span class="cperl-nonoverridable">print</span> <span class="string">"$k: </span><span class="cperl-hash">$score</span><span class="string">{$k} / $total\n"</span>;
+    }
+}
+<span class="keyword">exit</span>;
+</pre>
+
+<p><a href='flm.pl'>(download)</a></p>
+
+
+<h2>Web links</h2>
+<ul><li>
+<a href="https://www.iana.org/assignments/media-types">Official list of all MIME types assigned by the IANA (Internet Assigned Number Authority)</a></li></ul><div class="google-ad-horizontal">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- LeMoDa bar, 728x90, created 22/09/09 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6052617510425031"
+     data-ad-slot="6800468934"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6052617510425031"
+     data-ad-slot="7936048700"
+     data-ad-format="autorelaxed"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<hr><nav>
+<div class="navigation-box">
+<ul class="navigation-list">
+<li class="category-link">
+<a href="/index.html">LeMoDa top page</a>
+</li>
+
+<li class="category-link">
+<a href="../../perl/index.html">Perl</a>
+</li>
+
+<li class="category-link">
+<a href="../../perl-modules/index.html">Perl modules</a>
+</li>
+
+<li class="category-link">
+<a href="../../cpan/index.html">CPAN</a>
+</li>
+
+<li class="category-link">
+<a href="../../files/index.html">Files</a>
+</li>
+
+
+</ul>
+</div>
+</nav>
+<div style="clear:left;"></div>
+
+<div class='lemoda-page-bottom'>
+
+<a href="/copyright.html">Copyright Â© Ben Bullock 2009-2017</a>. All
+rights reserved. 
+
+
+For comments, questions, and corrections, please email
+<a href="mailto:benkasminbullock@gmail.com">Ben Bullock</a>
+(<i>benkasminbullock@gmail.com</i>).
+ /
+<a href="/privacy.html">Privacy</a> / 
+<a href="/disclaimer.html">Disclaimer</a>
+
+</div><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-11731688-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
+
+

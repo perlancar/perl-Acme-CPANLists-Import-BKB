@@ -1,0 +1,62 @@
+#!/usr/bin/env perl
+
+use 5.010;
+use strict;
+use warnings;
+use FindBin '$Bin';
+
+use App::CreateAcmeCPANListsImportModules;
+use Perinci::Sub::Util qw(gen_curried_sub);
+use Perinci::CmdLine::Any;
+
+gen_curried_sub(
+    'App::CreateAcmeCPANListsImportModules::create_acme_cpanlists_import_modules',
+    {
+        modules => [
+            {
+                name => 'FindMIMEType',
+                url => 'https://www.lemoda.net/perl/find-type-of-file/',
+                summary => 'Perl modules to find the MIME type of a file (2017)',
+            },
+            {
+                name => 'Handy',
+                url => 'https://www.lemoda.net/perl/handy-modules/index.html',
+                summary => 'Handy Perl modules (2011)',
+            },
+            {
+                name => 'Japanese',
+                url => 'https://www.lemoda.net/perl/cpan-japanese-language/index.html',
+                summary => 'CPAN modules for dealing with the Japanese language (2012)',
+            },
+            {
+                name => 'FastCGI',
+                url => 'https://www.lemoda.net/perl/fastcgi-modules/index.html',
+                summary => 'FastCGI Perl modules (2016)',
+            },
+            {
+                name => 'CheckMemory',
+                url => 'https://www.lemoda.net/perl/memory-check-modules/index.html',
+                summary => 'Perl modules for checking memory (2017)',
+            },
+            {
+                name => 'RemoveHTMLTags',
+                url => 'https://www.lemoda.net/perl/html-cleanup-modules/index.html',
+                summary => 'Perl modules to remove HTML tags (2017)',
+            },
+            {
+                name => 'FindDependencies',
+                url => 'https://www.lemoda.net/perl/perl-dependencies/index.html',
+                summary => 'Modules for finding Perl dependencies (2017)',
+            },
+        ],
+        namespace => 'Acme::CPANLists::Import::BKB',
+        user_agent => 'Mozilla/5.0',
+        dist_dir => "$Bin/..",
+    },
+    'app',
+);
+
+Perinci::CmdLine::Any->new(
+    url => '/main/app',
+    log => 1,
+)->run;
